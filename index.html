@@ -1,10 +1,176 @@
 <!DOCTYPE html>
-<html>
+<html lang="es">
 <head>
-    <title>Portafolio Tecnoseguridad</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Portafolio | Tecnoseguridad</title>
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:Arial,Helvetica,sans-serif;background:#030914;color:#f5f8ff;line-height:1.6}
+header{min-height:92vh;display:flex;align-items:center;position:relative;overflow:hidden;background:radial-gradient(circle at 80% 20%,#123d73 0,transparent 32%),linear-gradient(135deg,#020711,#071426)}
+header:before,header:after{content:"";position:absolute;border:1px solid #1b70c7;opacity:.25;transform:rotate(-18deg)}
+header:before{width:420px;height:420px;right:-130px;top:-100px}
+header:after{width:300px;height:300px;left:-130px;bottom:-130px}
+.container{width:min(1120px,92%);margin:auto;position:relative;z-index:2}
+.logo{display:flex;align-items:center;gap:16px;margin-bottom:35px}
+.shield{width:72px;height:72px;border:2px solid #258dff;border-radius:18px;display:grid;place-items:center;background:#020711;box-shadow:0 0 25px #1475d566;overflow:hidden}
+.shield img{width:100%;height:100%;object-fit:cover;display:block}
+.brand{font-size:clamp(30px,5vw,58px);font-weight:800;letter-spacing:1px}
+.brand span{color:#1682ff}
+.kicker{color:#4da5ff;font-weight:700;letter-spacing:3px;font-size:14px;margin-bottom:10px}
+h1{font-size:clamp(42px,7vw,78px);line-height:1.02;max-width:850px;margin-bottom:22px}
+h1 span{color:#258dff}
+.hero-text{max-width:720px;color:#c8d5e7;font-size:18px}
+.slogan{margin-top:25px;font-size:20px;font-weight:700;color:#fff}
+.btn{display:inline-block;margin-top:30px;padding:13px 24px;border-radius:9px;background:#116ed1;color:white;text-decoration:none;font-weight:700}
+section{padding:80px 0}
+.section-title{font-size:38px;margin-bottom:12px}
+.section-sub{color:#aebed2;max-width:700px;margin-bottom:40px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
+.card{background:linear-gradient(145deg,#0b1729,#07101e);border:1px solid #19395f;border-radius:16px;padding:27px;transition:.2s;position:relative;overflow:hidden}
+.card:hover{transform:translateY(-4px);border-color:#268dff;box-shadow:0 10px 35px #0008}
+.num{color:#248eff;font-size:14px;font-weight:800;letter-spacing:2px}
+.card h3{font-size:21px;margin:10px 0}
+.card p{color:#b7c5d7;font-size:15px}
+.tag{display:inline-block;margin-top:18px;color:#69b5ff;border:1px solid #1e5d99;border-radius:20px;padding:4px 10px;font-size:11px;font-weight:700}
+.about{background:#06101e}
+.columns{display:grid;grid-template-columns:1fr 1fr;gap:35px}
+.box{background:#0a1829;border:1px solid #183b63;border-radius:15px;padding:28px}
+.box h3{color:#4da5ff;margin-bottom:10px}
+.box p,.box li{color:#bdcadd}
+.box ul{padding-left:20px}
+.contact{text-align:center;background:linear-gradient(135deg,#07162a,#020711)}
+.contact-card{max-width:750px;margin:auto;padding:42px 25px;border:1px solid #1e5f9e;border-radius:18px;background:#071425}
+.contact a{color:#62b5ff;text-decoration:none;font-weight:700}
+footer{padding:25px;text-align:center;color:#8192a7;border-top:1px solid #10243b;background:#02060d;font-size:14px}
+@media(max-width:700px){.columns{grid-template-columns:1fr}header{min-height:85vh}}
+</style>
 </head>
 <body>
-    <h1>Página en construcción - Portafolio Tecnoseguridad</h1>
-    <p>Bienvenido. El contenido final se cargará pronto.</p>
+
+<header id="inicio">
+<div class="container">
+  <div class="logo">
+    <div class="shield">
+      <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABOYAAATmCAIAAAAKnjl9AABcLWNhQlgAAFwtanVtYgAAAB5qdW1kYzJwYQARABCAAACqADibcQNjMnBhAAAAXAdqdW1iAAAAR2p1bWRjMm1hABEAEIAAAKoAOJtxA3VybjpjMnBhOjIzMDBlOGYzLTA4NDctNGM4Yy1hM2JkLTRjMTdjMjJhMTA0ZQAAAAxDanVtYgAAAClqdW1kYzJhcwARABCAAACqADibcQNjMnBhLmFzc2VydGlvbnMAAAAJ0Wp1bWIAAAA7anVtZEDLDDK7ikidpwsq1vR/Q2kTYzJwYS5pY29uAAAAABhjMnNoICYvT2wAvo4/R7vkuMXGWwAAABdiZmRiAGltYWdlL3N2Zyt4bWwAAAAJd2JpZGI8c3ZnIHdpZHRoPSI3MTYiIGhlaWdodD0iNzE2IiB2aWV3Qm94PSIwIDAgNzE2IDcxNiIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTUwOC43NDkgMzE3LjM5OUM1MTYuNzc3IDI4Ny4zMTQgNTA4Ljk5MSAyNTMuODg0IDQ4NS4zODkgMjMwLjI4MkM0NjEuNzg4IDIwNi42ODEgNDI4LjM2IDE5OC44OTUgMzk4LjI3MyAyMDYuOTIzQzM3Ni4yMzEgMTg0LjkyOCAzNDMuMzkgMTc0Ljk1NiAzMTEuMTQ4IDE4My41OTZDMjc4LjkwNiAxOTIuMjM0IDI1NS40NSAyMTcuMjkyIDE4My41OTUgMzExLjE0OUMxNzQuOTU3IDM0My4zOTEgMTg0LjkyNyAzNzYuMjMyIDIwNi45MjQgMzk4LjI3NEMxOTguODk2IDQyOC4zNTkgMjA2LjY4MyA0NjEuNzg5IDIzMC4yODQgNDg1LjM5MUMyNTMuODg1IDUwOC45OTIgMjg3LjMxMyA1MTYuNzc5IDMxNy40MDEgNTA4Ljc1QzMzOS40NDIgNTMwLjc0NSAzNzIuMjg2IDU0MC43MTcgNDA0LjUyNSA1MzIuMDc5QzQzNi43NjcgNTIzLjQ0MSA0NjAuMjIzIDQ5OC4zODQgNDY4LjMxMyA0NjguMzE1QzQ5OC4zODMgNDYwLjIyNCA1MjMuNDQgNDM2Ljc2NiA1MzIuMDc4IDQwNC41MjZDNTA0MC43MTYgMzcyLjI4NSA1MzAuNzQ3IDMzOS40NDMgNTA4Ljc0OSAzMTcuNDAyVjMxNy4zOTlaTTQ3MC44OTkgMjQ0Ljc3NkM0ODYuODkyIDI2MC43NyA0OTMuNDg4IDI4Mi42MDEgNDkwLjY4NyAzMDMuNDEyTDQxNS41NzcgMjYwLjA0NkM0MTIuNDExIDI1OC4yMTggNDA4LjUwOSAyNTguMjE4IDQwNS4zNDUgMjYwLjA0NkwzMTcuNDAxIDMxMC44MlYyNzcuNTI2QzMxNy40MDEgMjc1LjE5MSAzMTguNjUyIDI3My4wMDUgMzIwLjY3NiAyNzEuODM3TDM4Ny42NDQgMjMzLjE3NEM0MTQuMTc4IDIxOC4zNTMgNDQ4LjM0NiAyMjIuMjIzIDQ3MC45MDEgMjQ0Ljc3Nkg0NzAuODk5Wk0zNTcuODM3IDMxMS4xNDRMMzk4LjI3NSAzMzQuNDkxVjM4MS4xODVMMzU3LjgzNyA0MDQuNTMyTDMxNy4zOTggMzgxLjE4NVYzMzQuNDkxTDM1Ny44MzcgMzExLjE0NFpNMjY0Ljc3NiAyNjkuNjkzQzI2NS4yMDcgMjM5LjMwNSAyODUuNjQ0IDIxMS42NDkgMzE2LjQ1MyAyMDMuMzkzQzMzOC4zIDE5Ny41NCAzNjAuNTA1IDIwMi43NDQgMzc3LjEyNyAyMTUuNTczTDMwMi4wMTQgMjU4LjkzN0MyOTguODQ4IDI2MC43NjQgMjk2Ljg5OCAyNjQuMTQ0IDI5Ni44OTggMjY3Ljc5OFYzNjkuMzQ2TDI2OC4wNjUgMzUyLjY5OUMyNjYuMDQzIDM1MS41MzEgMjY0Ljc3NiAzNDkuMzUzIDI2NC43NzYgMzQ3LjAxN1YyNjkuNjkxVjI2OS42OTNaTTIwMy4zOTEgMzE2LjQ1NEMyMDkuMjQ0IDI5NC42MDggMjI0Ljg1NCAyNzcuOTc4IDI0NC4yNzYgMjY5Ljk5OVYzNTYuNzNDMjQ0LjI3NiAzNjAuMzg0IDI0Ni4yMjYgMzYzLjc2MyAyNDkuMzkyIDM2NS41OTFMMzM3LjMzNyA0MTYuMzY1TDMwOC41MDMgNDMzLjAxM0MzMDYuNDgxIDQzNC4xODEgMzAzLjk2MSA0MzQuMTg4IDMwMS45MzkgNDMzLjAyTDIzNC45NzEgMzk0LjM1N0MyMDguODY4IDM3OC43ODkgMTk1LjEzOCAzNDcuMjYxIDIwMy4zOTEgMzE2LjQ1NFpNMjQ0Ljc3NSA0NzAuOUMyMjguNzgxIDQ1NC45MDYgMjIyLjE4NiA0MzMuMDc1IDIyNC45ODYgNDEyLjI2NEwzMDAuMDk2IDQ1NS42M0MzMDMuMjYzIDQ1Ny40NTcgMzA3LjE2NCA0NTcuNDU3IDMxMC4zMjggNDU1LjYzTDM5OC4yNzMgNDA0Ljg1NlY0MzguMTQ5QzM5OC4yNzMgNDQwLjQ4NSAzOTcuMDIyIDQ0Mi42NzEgMzk0Ljk5NyA0NDMuODM5TDMyOC4wMjkgNDgyLjUwMkMzMDEuNDk1IDQ5Ny4zMjIgMjY3LjMyNyA0OTMuNDUyIDI0NC43NzIgNDcwLjlIMjQ0Ljc3NVpNNDUwLjg5NyA0NDUuOTgyQzQ1MC40NjYgNDc2LjM3MSA0MzAuMDI5IDUwNC4wMjcgMzk5LjIyIDUxMi4yODNDMzc3LjM3MyA1MTguMTM2IDM1NS4xNjggNTEyLjkzMiAzMzguNTQ3IDUwMC4xMDJMNDEzLjY1OSA0NTYuNzM4QzQxNi44MjYgNDU0LjkxMSA0MTguNzc1IDQ1MS41MzIgNDE4Ljc3NSA0NDcuODc3VjM0Ni4zMjlMNDQ3LjYwOSAzNjIuOTc3QzQ0OS42MzEgMzY0LjE0NSA0NTAuODk3IDM2Ni4zMjMgNDUwLjg5NyAzNjguNjU5VjQ0NS45ODVWNDQ1Ljk4MlpNNTEyLjI4MiAzOTkuMjIxQzUwNi40MjkgNDIxLjA2OCA0OTAuODE5IDQzNy42OTcgNDcxLjM5NyA0NDUuNjc2VjM1OC45NDZDNDcxLjM5NyAzNTUuMjkyIDQ2OS40NDggMzUxLjkxMiA0NjYuMjgxIDM1MC4wODVMMzc4LjMzNiAyOTkuMzExTDQwNy4xNyAyODIuNjYzQzQwOS4xOTIgMjgxLjQ5NSA0MTEuNzEyIDIODEuNDg3IDQxMy43MzQgMjgyLjY1NUw0ODAuNzAyIDMyMS4zMThDNTA2LjgwNSAzMzYuODg3IDUyMC41MzYgMzY4LjQxNSA1MTIuMjgyIDM5OS4yMjFaIiBmaWxsPSJibGFjayIvPgo8L3N2Zz4K" alt="Logo de Tecnoseguridad">
+    </div>
+    <div class="brand">TECNO<span>SEGURIDAD</span></div>
+  </div>
+
+  <div class="kicker">PORTAFOLIO DE PRODUCTOS Y SERVICIOS</div>
+  <h1>Soluciones para un entorno <span>digital seguro.</span></h1>
+  <p class="hero-text">Ofrecemos servicios de ciberseguridad, gestión TI, monitoreo, mantenimiento y soporte técnico orientados a las instituciones educativas.</p>
+  <p class="slogan">“INNOVACIÓN SEGURA, EDUCACIÓN CONFIABLE.”</p>
+  <a class="btn" href="#servicios">Conocer nuestros servicios</a>
+</div>
+</header>
+
+<section id="servicios">
+<div class="container">
+  <h2 class="section-title">Nuestros servicios</h2>
+  <p class="section-sub">Un portafolio diseñado para apoyar la seguridad, el funcionamiento y la gestión de los recursos tecnológicos.</p>
+
+  <div class="grid">
+
+    <article class="card">
+      <div class="num">01</div>
+      <h3>Ciberseguridad educativa</h3>
+      <p>Protección de equipos y sistemas frente a amenazas digitales, malware y accesos no autorizados.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+    <article class="card">
+      <div class="num">02</div>
+      <h3>Monitoreo de seguridad</h3>
+      <p>Supervisión de la actividad tecnológica para identificar comportamientos o situaciones sospechosas.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+    <article class="card">
+      <div class="num">03</div>
+      <h3>Gestión de equipos tecnológicos</h3>
+      <p>Organización y administración de computadores y recursos tecnológicos de la institución.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+    <article class="card">
+      <div class="num">04</div>
+      <h3>Mantenimiento preventivo</h3>
+      <p>Revisión, limpieza, actualización y optimización de equipos para ayudar a prevenir fallas.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+    <article class="card">
+      <div class="num">05</div>
+      <h3>Soporte técnico</h3>
+      <p>Atención de problemas tecnológicos, configuración de equipos y solución de fallas.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+    <article class="card">
+      <div class="num">06</div>
+      <h3>Gestión de software</h3>
+      <p>Apoyo en la instalación, actualización y organización del software utilizado por la institución.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+    <article class="card">
+      <div class="num">07</div>
+      <h3>Copias de seguridad</h3>
+      <p>Organización de respaldos para ayudar a proteger información importante.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+    <article class="card">
+      <div class="num">08</div>
+      <h3>Diagnóstico tecnológico</h3>
+      <p>Revisión del estado de los equipos para identificar problemas de rendimiento, seguridad o funcionamiento.</p>
+      <span class="tag">SOLUCIÓN TI</span>
+    </article>
+
+  </div>
+</div>
+</section>
+
+<section class="about">
+<div class="container">
+  <h2 class="section-title">Nuestra propuesta</h2>
+  <p class="section-sub">Integramos diferentes soluciones para construir un ecosistema tecnológico más seguro, organizado y eficiente.</p>
+
+  <div class="columns">
+
+    <div class="box">
+      <h3>¿A quién va dirigido?</h3>
+      <p>A instituciones educativas que buscan fortalecer la seguridad informática y mejorar la gestión de sus recursos tecnológicos.</p>
+    </div>
+
+    <div class="box">
+      <h3>¿Qué ofrecemos?</h3>
+      <ul>
+        <li>Protección y seguridad digital.</li>
+        <li>Monitoreo tecnológico.</li>
+        <li>Gestión y mantenimiento de equipos.</li>
+        <li>Soporte técnico.</li>
+        <li>Organización y respaldo de información.</li>
+      </ul>
+    </div>
+
+  </div>
+</div>
+</section>
+
+<section class="contact" id="contacto">
+<div class="container">
+  <div class="contact-card">
+    <h2 class="section-title">Contáctanos</h2>
+    <p>¿Quieres conocer más sobre nuestro proyecto o nuestros servicios?</p>
+    <p style="margin-top:18px">Correo: <a href="mailto:Tecnoseguridad668@gmail.com">Tecnoseguridad668@gmail.com</a></p>
+    <p style="margin-top:10px">Teléfono: <a href="tel:3053670557">305 367 0557</a></p>
+  </div>
+</div>
+</section>
+
+<footer>TECNOSEGURIDAD · Innovación segura, educación confiable.</footer>
+
 </body>
 </html>
